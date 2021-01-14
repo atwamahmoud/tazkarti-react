@@ -8,10 +8,9 @@ import {
   TextField,
   Typography,
 } from "@material-ui/core";
-import { Link, navigate } from "@reach/router";
+import { navigate } from "@reach/router";
 import React, { FC, useState } from "react";
-import TopBar from "../../Components/TopBar";
-import { editData, getUser, signup } from "../../Services/Auth";
+import { editData, getUser } from "../../Services/Auth";
 import { renderErrors } from "../../Utils/renderers";
 
 const Edit: FC = () => {
@@ -86,7 +85,6 @@ const Edit: FC = () => {
   }
   return (
     <>
-      <TopBar isValid={false} isAuth={true} />
       <Container maxWidth="sm">
         <Box p={3} marginTop={16} component={Paper}>
           <Typography variant="h4">Edit personal Data</Typography>
